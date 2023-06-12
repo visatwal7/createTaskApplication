@@ -27,9 +27,7 @@ public class ReconRecordsController {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         headers.setBasicAuth("cp4admin", "0ubDqBnAyPEukf0pcuUk");
-        System.out.println("before entity");
         HttpEntity<RequestApproval> entity = new HttpEntity<RequestApproval>(requestApproval, headers);
-        System.out.println("after entity");
         System.out.println(entity.getBody().toString());
 
         restTemplate.exchange(
